@@ -281,6 +281,7 @@ header a{
     border: 1px solid #DEDEDE ;
     outline: none;
     font-family: inherit;
+    font-size: 0.8rem;
 }
 .text_inputs::placeholder { 
     color: #a8a7a7;
