@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vedsted Gulvservice ApS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style mobile first.css">
 
 </head>
@@ -39,13 +42,13 @@
                 </div>
                 <nav>
                     <ul class="flex_row justify_end ">
-                        <li><a href="./index.html">Velkommen</a></li>
-                        <li><a href="#">Gulvslibning & behandling</a></li>
-                        <li><a href="#">Linoleum, vinyl & tæpper</a></li>
-                        <li><a href="#">Gulvvådrum</a></li>
-                        <li><a href="#">Trægulv</a></li>
-                        <li><a href="#">Om os</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a class="desktop_menu_item" href="./index.html">Velkommen</a></li>
+                        <li><a class="desktop_menu_item" href="#1">Gulvslibning & behandling</a></li>
+                        <li><a class="desktop_menu_item" href="#2">Linoleum, vinyl & tæpper</a></li>
+                        <li><a class="desktop_menu_item" href="#3">Gulvvådrum</a></li>
+                        <li><a class="desktop_menu_item" href="#4">Trægulv</a></li>
+                        <li><a class="desktop_menu_item" href="#5">Om os</a></li>
+                        <li><a class="desktop_menu_item" href="#6">Kontakt</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,27 +56,27 @@
         </div>
 
         <!-- mobile menu (colapsable. visible at less than width: 768px) -->
-        <div id="mobilemenu">
-            <nav class="flex_col ">
+        <div id="mobilemenu" class="close_nav margin_bot_15 text_center">
+            <nav class="flex_col  ">
                 <a href="./index.html">
                     <div class="nav_item">Velkommen</div>
                 </a>
-                <a href="#">
+                <a href="#1">
                     <div class="nav_item">Gulvslibning & behandling</div>
                 </a>
-                <a href="#">
+                <a href="#2">
                     <div class="nav_item">Linoleum, vinyl & tæpper</div>
                 </a>
-                <a href="#">
+                <a href="#3">
                     <div class="nav_item">Gulvvådrum</div>
                 </a>
-                <a href="#">
+                <a href="#4">
                     <div class="nav_item">Trægulv</div>
                 </a>
-                <a href="#">
+                <a href="#5">
                     <div class="nav_item">Om os</div>
                 </a>
-                <a href="#">
+                <a href="#6">
                     <div class="nav_item">Kontakt</div>
                 </a>
             </nav>
@@ -82,12 +85,17 @@
     </header>
 
     <main>
+
+        <!-- 1st section: HERO -->
         <section id="hero_section" class="bg_slider">
             <div id="" class="page_margin">
                 <h1>Vil du have <span class="block">flotte gulve?</span></h1>
                 <button id="hero_button">Få et tilbud</button>
+                <!-- button can be configured either which way, send email, a page with a form, etc. -->
             </div>
         </section>
+
+        <!-- 2nd section: PRODUCTS -->
 
         <section class=" page_margin margin_top_35 margin_bot_35 text_center">
             <div class="flex_row margin_bot_35 ">
@@ -104,35 +112,45 @@
                 <div class="flex_shrink_half"></div>
 
             </div>
-            <div class="flex_col_to_row space_between">
-                <div class="round_images">
-                    <img src="images/behandling.png" alt="">
-                    <h3>Gulvslibning & Behandling</h3>
+
+            <!-- circular images -->
+            <div class="flex_col_to_row justify_center text_center">
+                <div class="img_row align_self_center">
+                    <div class="round_images ">
+                        <img src="images/behandling.png" alt="">
+                        <h3>Gulvslibning & Behandling</h3>
+                    </div>
+                    <div class="round_images">
+                        <img src="images/vaadrum.png" alt="">
+                        <h3>Gulvvådrum</h3>
+                    </div>
                 </div>
-                <div class="round_images">
-                    <img src="images/vaadrum.png" alt="">
-                    <h3>Gulvvådrum</h3>
-                </div>
-                <div class="round_images">
-                    <img src="images/linoleum.png" alt="">
-                    <h3>Linoleum, vinyl & tæpper</h3>
-                </div>
-                <div class="round_images">
-                    <img src="images/traegulve.png" alt="">
-                    <h3>Trægulv</h3>
+                <div class="img_row align_self_center">
+                    <div class="round_images">
+                        <img src="images/linoleum.png" alt="">
+                        <h3>Linoleum, vinyl & tæpper</h3>
+                    </div>
+                    <div class="round_images">
+                        <img src="images/traegulve.png" alt="">
+                        <h3>Trægulv</h3>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+        <!-- 3rd section: tree background -->
         <section id="trae_bg_section">
             <div class="flex_col_to_row page_margin">
-                <div class="flex_shrink_one">
+                <div class="flex_shrink_half">
                     <h2>Vi rådgiver gerne</h2>
                     <p>Er du i tvivl om hvad den rigtige løsning er for dig? Så hjælper vi gerne med at finde svaret.
                         Lad os aftale et møde og se på det sammen - så kan vi hurtigt fortælle, om du har brug for et
                         helt nyt gulv - eller om det kan klares med en omgang slibning og behandling.</p>
                     <p>Ping eller skriv - så skal vi nok hjælpe dig godt videre</p>
                 </div>
-                <div class="flex_shrink_one">
+                <div class="margin_right_40"></div>
+                <div class="flex_shrink_half">
                     <h2>Vi har erfaringen</h2>
                     <p>Hos Vedsted Gulvservice har vi i generationer leveret flotte gulvløsninger til sjællandske
                         familier, organisationer og virksomheder.</p>
@@ -140,7 +158,9 @@
                         for dig.</p>
                 </div>
             </div>
-            <div class="page_margin flex_col_to_row space_around margin_top_35 margin_bot_35 text_center">
+
+            <!-- logos of references -->
+            <div class="page_margin flex_col_to_row space_around margin_top_35 margin_bot_15 text_center">
                 <div class="reference_photos"> <img src="images/junckers.png" alt="">
                 </div>
                 <div class="reference_photos "> <img src="images/byg-garanti.png" alt="">
@@ -149,11 +169,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- 4th section: Contact -->
         <section class="page_margin margin_bot_75">
             <div class="flex_row margin_top_35 margin_bot_15">
                 <div class="flex_shrink_half"></div>
                 <div class="flex_shrink_one text_center">
-                    <h3>Kontakt os</h3>
+                    <h2>Kontakt os</h2>
                     <p>Kontakt os i dag på telefon <span>44 91 48 91</span> eller på email:
                         <span>info@vedsted-gulve.dk</span> og lad os høre, hvad du drømmer om. <br> Så skal vi nok gøre
                         vores for, at drømmen går i opfyldelse.
@@ -162,27 +184,31 @@
                 <div class="flex_shrink_half"></div>
             </div>
             <div class="flex_col_to_row space_around">
-                <div class="flex_shrink_one max_wid_30vw">
+                <div class="flex_shrink_one ">
+
                     <form action="#" method="POST">
-                        <input class="text_inputs block" type="text" placeholder="Navn">
-                        <input class="text_inputs block" type="text" placeholder="Telefon">
-                        <input class="text_inputs block" type="text" placeholder="Mailadresse">
-                        <textarea class="text_inputs block" placeholder="Besked" name="" id="" cols="54"
+                        <input class="text_inputs block" type="text" name="navn" placeholder="Navn" value>
+                        <input class="text_inputs block" type="text" name="tel" placeholder="Telefon">
+                        <input class="text_inputs block" type="text" name="email" placeholder="Mailadresse">
+                        <textarea class="text_inputs block" name="besked" placeholder="Besked" cols="54"
                             rows="10"></textarea>
                         <button id="form_button" class="block">SEND</button>
                     </form>
                 </div>
-                <div class="flex_shrink_one max_wid_30vw">
+                <div class="margin_right_40"></div>
+                <div class="flex_shrink_one ">
+                    <!-- Google maps component built using google maps platform https://developers.google.com/maps  -->
                     <iframe " style=" border:0" loading="lazy" allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?q=vedsted%20Gulvservice&key=AIzaSyBS5N4xMjOKOUrnsUlj8enQ3CDjg3MwIME"></iframe>
                 </div>
             </div>
         </section>
-
     </main>
+
+    <!-- footer section -->
     <footer>
         <div class="page_margin">
-            <div class="flex_row align_center space_around margin_bot_15 text_center">
+            <div class="flex_col_to_row align_center space_around margin_bot_15 ">
                 <div class="footer_photos"><img src="images/aaa.png" alt=""></div>
                 <div class="footer_photos white_text text_right">
                     <h3 class="margin_0">Byggeriets Ankenævn</h3>
@@ -206,18 +232,10 @@
 </body>
 
 
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>
-    $(function () {
-        $('a').each(function () {
-            if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('nav_active'); $(this).parents('li').addClass('active');
-            }
-        });
-    });
-</script>
+<!-- script to enable button to open and close menu in mobile layout on smaller screens  -->
+<script src="menu_button.js"></script>
 
-
-<script src="app.js"></script>
+<!-- script to highlight current page in menu on desktops -->
+<script src="menu_underline.js"></script>
 
 </html>

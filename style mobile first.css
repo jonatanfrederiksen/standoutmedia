@@ -1,17 +1,15 @@
-
-
 /* overall */
-
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 350px;
 }
 
 
 
-/* fonts */
+/* font sizes */
 
 h1{
     font-size: 1.5rem;
@@ -27,10 +25,9 @@ h1 > span{
 }
 h2{
     font-size: 1rem;
-
 }
 h3{
-    font-size: 1.2rem;
+    font-size: 0.7rem;
 }
 h4{
 
@@ -39,7 +36,7 @@ h5{
 
 }
 p{
-font-size: 1rem;
+font-size: 0.7rem;
 }
 p > span {
     font-weight: bold;
@@ -50,8 +47,8 @@ p > span {
 /* margins */
 
 .page_margin{
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 .margin_top_35{
     margin-top: 35px;
@@ -67,6 +64,9 @@ p > span {
 }
 .margin_0{
     margin: 0 auto;
+}
+.margin_right_40{
+    margin-right: 40px;
 }
 
 
@@ -85,7 +85,7 @@ p > span {
 
 
 
-/* --- flex */
+/* --- flex --- */
 
 /* flex direction */
 .flex_row{
@@ -99,7 +99,8 @@ p > span {
 
 /* from col to row on bigger screens (see media queries) */
 .flex_col_to_row{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 /* flex shrink */
@@ -154,7 +155,6 @@ header{
     color: #000;
     white-space: nowrap
 }
-
 #header_logo{
     width: 100px;
     margin: 1rem;
@@ -197,20 +197,23 @@ header a{
     align-self: center;
 }
 #mobilemenu{
-    background-color:;
-    border-radius: 0 0 20% 20%;
-    height: 0;
-    display: none;
-    text-align: center;
-    animation: height 0.5s;
+    height: auto;
 
 }
+.open_nav{
+    display: block;
+}
+.close_nav{
+    display: none;
+}
+
 .nav_item{
-    width: 50%;
-    margin: 0 auto;
-    background-color: gainsboro;
-    padding: 5px;
-    margin: 1px;
+    width: 100%;
+    font-size: 0.8rem;
+    /* background-color: #313132; */
+    /* color: white; */
+    padding: 0.5rem;
+    margin-bottom: 4px;
 }
 
 
@@ -236,15 +239,16 @@ header a{
 
 /* --- services section */
 
+.img_row{
+    display: flex;
+    flex-direction: column;
+}
 .round_images{
-    max-width: 250px;
-    margin: 20px;
-    align-self: center;
+    max-width: 300px;
+    margin: 15px;
 }
 .round_images > img{
-    margin: 5px 15px;
     max-width: 100%;
-    flex: 1 1 150px;
 }
 
 
@@ -253,9 +257,12 @@ header a{
     background: url("images/trae.jpg") left/cover no-repeat;
     padding: 25px 0;
 }
+#trae_bg_section h2{
+    color: #222;
+}
 .reference_photos{
     align-self: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 .reference_photos > img{
     width: 200px;
@@ -321,9 +328,33 @@ footer p{
 
 
 
+/* --------- media queries --------- */
 
-/* media queries */
-@media (min-width: 480px) {
+@media (min-width: 481px) {
+    .page_margin{
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h1 > span{
+        font-size: 3.5rem;
+    
+    }
+    h2{
+        font-size: 1.2rem;
+
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
     .page_margin{
         margin-left: 10vw;
         margin-right: 10vw;
@@ -336,47 +367,34 @@ footer p{
     
     }
     h3{
-        font-size: 0.8rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .page_margin{
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
-    h1{
-        font-size: 3rem;
-    }
-    h1 > span{
-        font-size: 3.5rem;
-    
-    }
-    h3{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .flex_col_to_row{
         display: flex;
         flex-direction: row;
+        align-content: center;
     }
-    .max_wid_30vw{
-        max-width: 30vw;
-    }
+
+    /* properties to swap from mobile menu to desktop menu, below */
     #menu_open_btn{
         display: none;
     }
     #header_nav_Large{
         display: flex;
     }
+    #mobilemenu{
+        display: none;
+    }
     .nav_active{
         text-decoration: underline #ecc511 2px;
         text-underline-offset: 3px;
     }
     header a{
-        margin: 0 0.8rem;
+        margin: 0 0.4rem;
     }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 1025px) {
     .page_margin{
         margin-left: 13vw;
         margin-right: 13vw;
@@ -388,16 +406,21 @@ footer p{
         font-size: 3.5rem;
     
     }
-    h3{
-        font-size: 0.8rem;
+    p{
+        font-size: 0.9rem;
+    }
+    header a{
+        margin: 0 0.8rem;
+    }
+    .img_row{
+        flex-direction: row;
     }
 }
 
-
 @media (min-width: 1201px) {
     .page_margin{
-        margin-left: 19.5vw;
-        margin-right: 19.5vw;
+        margin-left: 18.5vw;
+        margin-right: 18.5vw;
     }
     h1{
         font-size: 3.5rem;
@@ -406,120 +429,4 @@ footer p{
         font-size: 5rem;
     
     }
-    h3{
-        font-size: 1.2rem;
-    }
 }
-
-/* quick access */
-product_brief_colors{
-    color: #ecc511 #7a0202 #313132 #fff #000 #222
-    }
-
-
-/* 
-
-
-header div img{
-    width: 7vw;
-    margin: 0.7rem;
-}
-
-#header_info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: flex-end;
-}
-
-#header_info div{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.icons{
-    width: 17px;
-    margin: 0;
-    position: relative;
-    top: 2px;
-}
-
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 0.5rem 0;
-    padding: 0;
-}
-
-nav li{
-    margin: 0 0.5rem;
-}
-
-a{
-    color: inherit;
-    margin: 5px;
-    text-decoration: none;
-}
-
-
-
-main{
-
-}
-
-
-
-.sections{
-    margin: 10px 20vw;
-
-}
-
-#product_images{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: ;
-}
-
-.image_sections img{
-    width: 100vw;
-}
-
-.round_images img{
-   flex-shrink: 1;
-}
-
-
-
-#section3{
-    background: url(images/trae.jpg) center/contain no-repeat;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 18.5vw;
-}
-
-#section3 > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 1rem 0;
-}
-
-#section3 > div > div {
-    flex: 1 1 100px;
-}
-
-.ref_logos img{
-    
-    width: ;
-    margin: 2rem 0;
-
-}
-
-footer{
-
-}
- */
-
-
