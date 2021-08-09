@@ -156,7 +156,8 @@ header{
     white-space: nowrap
 }
 #header_logo{
-    width: 100px;
+    width: 120px;
+    height: 40px;
     margin: 1rem;
 }
 
@@ -386,7 +387,9 @@ footer p{
         display: none;
     }
     .nav_active{
-        text-decoration: underline #ecc511 2px;
+        text-decoration-line: underline;
+        text-decoration-color: #ecc511;
+        text-decoration-thickness: 2px;
         text-underline-offset: 3px;
     }
     header a{
