@@ -1,48 +1,42 @@
 /* overall */
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 350px;
 }
 
 
 
+/* font sizes */
 
-/* fonts */
 h1{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     color: #fff;
     margin: 0;
     text-shadow: 0px 2px 7px #000;
 
 }
-
 h1 > span{
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 2.5rem;
 
 }
-
 h2{
-    font-size: 1.5rem;
-
+    font-size: 1rem;
 }
-
 h3{
-    font-size: 1.2rem;
+    font-size: 0.7rem;
 }
-
 h4{
 
 }
-
 h5{
 
 }
-
 p{
-font-size: 1rem;
+font-size: 0.7rem;
 }
 p > span {
     font-weight: bold;
@@ -51,9 +45,10 @@ p > span {
 
 
 /* margins */
+
 .page_margin{
-    margin-left: 19.5vw;
-    margin-right: 19.5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 .margin_top_35{
     margin-top: 35px;
@@ -68,11 +63,16 @@ p > span {
     margin-bottom: 15px;
 }
 .margin_0{
-    margin: 0;
+    margin: 0 auto;
+}
+.margin_right_40{
+    margin-right: 40px;
 }
 
 
+
 /* text */
+
 .text_center{
     text-align: center;
 }
@@ -85,33 +85,36 @@ p > span {
 
 
 
-/* flex */
+/* --- flex --- */
+
+/* flex direction */
 .flex_row{
     display: flex;
     flex-direction: row;
 }
-
 .flex_col{
     display: flex;
     flex-direction: column;
 }
-.flex_col_b_768{
+
+/* from col to row on bigger screens (see media queries) */
+.flex_col_to_row{
     display: flex;
-    flex-direction: col;
+    flex-direction: column;
 }
 
-
+/* flex shrink */
 .flex_shrink_half{
-    flex: 0.5 0.5 50px
+    flex: 0.5 0.5 0
 }
 .flex_shrink_one{
     flex: 1 1 300px
 }
 
+/* justify content */
 .space_around{
     justify-content: space-around;
 }
-
 .space_between{
     justify-content: space-between;
 }
@@ -122,6 +125,7 @@ p > span {
     justify-content: center;
 }
 
+/* align content */
 .align_center{
     align-content: center;
 }
@@ -129,36 +133,45 @@ p > span {
     align-content: flex-end;
 }
 
-
-/* sizes */
-.max_wid_30vw{
-    max-width: 27vw;
+/* self-align */
+.align_self_center{
+    align-self: center;
 }
+
+
+/* display */
+
 .block{
     display: block;
 }
 
 
-/* components */
+/* --------- components --------- */
+
+/* --- header section */
 
 header{
     font-size: 0.65rem;
     color: #000;
-    font-size: 0.8rem;
+    white-space: nowrap
 }
-
 #header_logo{
-    width: 8vw;
+    width: 120px;
+    height: 40px;
     margin: 1rem;
 }
 
+/* desktop navbar */
+
+#header_nav_Large{
+    display: none;
+}
 .icons{
     width: 17px;
     margin: 0 5px ;
     position: relative;
     top: 2px;
 }
-
 nav ul{
     display: flex;
     flex-direction: row;
@@ -167,30 +180,52 @@ nav ul{
     padding: 0;
     list-style-type: none;
 }
-
 header a{
     color: inherit;
     text-decoration: none;
-    margin: 0 0.8rem;
 }
-
 #phonenum{
     color: #ecc511;
     font-size: 0.9rem;
     margin: 0 1.5rem;
 }
 
-.nav_active{
-    text-decoration: underline #ecc511 2px;
-    text-underline-offset: 3px;
+/* mobile navbar */
+
+#menu_open_btn{
+    width: 25px;
+    height: 25px;
+    align-self: center;
 }
+#mobilemenu{
+    height: auto;
+
+}
+.open_nav{
+    display: block;
+}
+.close_nav{
+    display: none;
+}
+
+.nav_item{
+    width: 100%;
+    font-size: 0.8rem;
+    /* background-color: #313132; */
+    /* color: white; */
+    padding: 0.5rem;
+    margin-bottom: 4px;
+}
+
+
+
+/* --- Hero section */
 
 #hero_section{
     padding: 130px 0;
     background: url("images/slider.jpg") left/cover no-repeat;;
 
 }
-
 #hero_button{
     border: none;
     background-color:#7a0202 ;
@@ -198,36 +233,45 @@ header a{
     color: white;
     padding: 0.3rem 1.3rem;
     margin-top: 20px;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
+
+
+/* --- services section */
+
+.img_row{
+    display: flex;
+    flex-direction: column;
+}
 .round_images{
     max-width: 300px;
-    /* margin: 20px; */
+    margin: 15px;
 }
-
 .round_images > img{
-    margin: 5px 15px;
     max-width: 100%;
-    flex: 1 1 150px;
 }
 
+
+/* --- rådgivning & erfaring section */
 #trae_bg_section{
-    background: url("images/trae.jpg") left/cover no-repeat;;
+    background: url("images/trae.jpg") left/cover no-repeat;
     padding: 25px 0;
 }
-
 #trae_bg_section h2{
     color: #222;
 }
-
 .reference_photos{
     align-self: center;
+    margin-bottom: 50px;
 }
-
 .reference_photos > img{
     width: 200px;
 }
+
+
+
+/* --- contact section */
 
 .text_inputs{
     width: 100%;
@@ -242,7 +286,6 @@ header a{
     color: #a8a7a7;
     opacity: 1;
 }
-
 #form_button{
     width: 100%;
     margin: 5px;
@@ -255,13 +298,17 @@ header a{
     box-sizing: content-box
 }
 
-/* google maps component - https://www.embedgooglemap.net */
+/* google maps component*/
 iframe{
     width: 100%; 
     height: 100%;
+    min-height: 300px;
     margin-left: 10px;
 }
 
+
+
+/* footer */
 footer{
     padding-top: 20px;
     background-color: #313132;
@@ -269,12 +316,46 @@ footer{
 footer p{
     font-size: 0.7rem;
 }
+.footer_photos{    
+    align-self: center;
+    margin-bottom: 10px;
+    width: 200px;
+
+}
+.footer_photos > img{
+    width: 200px;
+}
 
 
 
 
-/* media queries */
-@media (min-width: 480px) {
+/* --------- media queries --------- */
+
+@media (min-width: 481px) {
+    .page_margin{
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h1 > span{
+        font-size: 3.5rem;
+    
+    }
+    h2{
+        font-size: 1.2rem;
+
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
     .page_margin{
         margin-left: 10vw;
         margin-right: 10vw;
@@ -287,30 +368,36 @@ footer p{
     
     }
     h3{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .flex_col_to_row{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    /* properties to swap from mobile menu to desktop menu, below */
+    #menu_open_btn{
+        display: none;
+    }
+    #header_nav_Large{
+        display: flex;
+    }
+    #mobilemenu{
+        display: none;
+    }
+    .nav_active{
+        text-decoration-line: underline;
+        text-decoration-color: #ecc511;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 6px;
+    }
+    header a{
+        margin: 0 0.4rem;
     }
 }
 
-@media (min-width: 768px) {
-    .page_margin{
-        margin-left: 12vw;
-        margin-right: 12vw;
-    }
-    h1{
-        font-size: 3rem;
-    }
-    h1 > span{
-        font-size: 3.5rem;
-    
-    }
-    h3{
-        font-size: 0.8rem;
-    }
-    .flex_col_b_768{
-        flex-direction: row;
-    }
-}
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .page_margin{
         margin-left: 13vw;
         margin-right: 13vw;
@@ -322,16 +409,21 @@ footer p{
         font-size: 3.5rem;
     
     }
-    h3{
-        font-size: 0.8rem;
+    p{
+        font-size: 0.9rem;
+    }
+    header a{
+        margin: 0 0.8rem;
+    }
+    .img_row{
+        flex-direction: row;
     }
 }
 
-
 @media (min-width: 1201px) {
     .page_margin{
-        margin-left: 19.5vw;
-        margin-right: 19.5vw;
+        margin-left: 18.5vw;
+        margin-right: 18.5vw;
     }
     h1{
         font-size: 3.5rem;
@@ -340,121 +432,10 @@ footer p{
         font-size: 5rem;
     
     }
-    h3{
-        font-size: 1.2rem;
-    }
 }
 
 
+/* you made it down here.. thank you! i hope it made sense  */
 
-
-
-/* 
-
-
-header div img{
-    width: 7vw;
-    margin: 0.7rem;
-}
-
-#header_info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: flex-end;
-}
-
-#header_info div{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.icons{
-    width: 17px;
-    margin: 0;
-    position: relative;
-    top: 2px;
-}
-
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 0.5rem 0;
-    padding: 0;
-}
-
-nav li{
-    margin: 0 0.5rem;
-}
-
-a{
-    color: inherit;
-    margin: 5px;
-    text-decoration: none;
-}
-
-
-
-main{
-
-}
-
-
-
-.sections{
-    margin: 10px 20vw;
-
-}
-
-#product_images{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: ;
-}
-
-.image_sections img{
-    width: 100vw;
-}
-
-.round_images img{
-   flex-shrink: 1;
-}
-
-
-
-#section3{
-    background: url(images/trae.jpg) center/contain no-repeat;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 18.5vw;
-}
-
-#section3 > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 1rem 0;
-}
-
-#section3 > div > div {
-    flex: 1 1 100px;
-}
-
-.ref_logos img{
-    
-    width: ;
-    margin: 2rem 0;
-
-}
-
-footer{
-
-}
- */
-
-
-colors{
-color: #ecc511 #7a0202 #313132 #fff #000 #222
-}
+/* made by Jonatan Frederiksen */
+/* as part of a jobinterview for standoutmedia ApS  */
