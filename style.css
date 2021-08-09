@@ -355,7 +355,7 @@ footer p{
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 805px) {
     .page_margin{
         margin-left: 10vw;
         margin-right: 10vw;
